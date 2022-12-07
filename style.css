@@ -38,7 +38,7 @@ p {
   grid-area: header;
   background-image: url("images/taco.jpg");
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -220,11 +220,34 @@ button {
 
   .hero {
     grid-area: header;
+  
   }
   .cta1 {
     grid-area: cta1;
   }
 
+  .cta2 {
+    grid-area: cta2;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .top {
+    grid-template-areas: "header"
+                          "header"
+                          "header"
+                          "header"
+                          "cta1"
+                          "cta2";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .cta1 {
+    grid-area:cta1;
+  }
   .cta2 {
     grid-area: cta2;
   }
