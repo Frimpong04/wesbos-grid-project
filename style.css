@@ -202,6 +202,27 @@ button {
   [aria-controls="menu-list"] {
     display: block;
     margin-bottom:1rem;
+    perspective: 300;
+  }
+
+  [aria-expanded="false"] ~ #menu-list {
+    height:0px;
+    transform: rotateX(90deg);
+    transition: all 0.3s linear;
+    
+  }
+
+  [aria-expanded="true"] ~ #menu-list {
+    transform: rotateX(0deg);
+    transition: all 0.3s linear;
+  }
+
+  [aria-expanded="false"] .close {
+    display: none;
+  }
+  
+  [aria-expanded="true"] .open {
+    display: none;
   }
 
 }
