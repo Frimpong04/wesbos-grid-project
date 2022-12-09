@@ -11,6 +11,7 @@ html {
 
 body {
   font-size: 1.5rem;
+  background:linear-gradient(45deg, pink, purple);
 }
 h1 {
   font-size: 4.5rem;
@@ -35,6 +36,7 @@ p {
                         "header header cta2";
 }
 .hero {
+  min-height: 400px;
   grid-area: header;
   background-image: url("images/taco.jpg");
   background-repeat: no-repeat;
@@ -110,7 +112,7 @@ p {
 }
 
 .feature {
-  background-color: #f2d878;
+  background-color: whitesmoke;
   padding: 1rem;
   text-align: center;
 }
@@ -206,13 +208,14 @@ button {
   }
 
   [aria-expanded="false"] ~ #menu-list {
-    height:0px;
+    max-height:0px;
     transform: rotateX(90deg);
     transition: all 0.3s linear;
-    
+
   }
 
   [aria-expanded="true"] ~ #menu-list {
+    max-height:500px;
     transform: rotateX(0deg);
     transition: all 0.3s linear;
   }
@@ -234,8 +237,6 @@ button {
 
   .top {
     grid-template-areas: "header header"
-                          "header header"
-                          "header header"
                           "cta1 cta2";
   }
 
